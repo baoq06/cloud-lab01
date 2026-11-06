@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 350" width="100%" height="100%">
+  <defs>
+    <linearGradient id="cloudGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#60a5fa" />
+      <stop offset="100%" stop-color="#2563eb" />
+    </linearGradient>
+    <linearGradient id="sunGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fbbf24" />
+      <stop offset="100%" stop-color="#f59e0b" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="12" stdDeviation="15" flood-color="#1e3a8a" flood-opacity="0.18" />
+    </filter>
+  </defs>
+
+  <!-- Sun in background -->
+  <circle cx="340" cy="110" r="65" fill="url(#sunGrad)" opacity="0.9" />
+
+  <!-- Cloud Base with shadow -->
+  <g filter="url(#shadow)">
+    <!-- Main Cloud Shape -->
+    <path d="M 150 250
+             L 370 250
+             A 45 45 0 0 0 370 160
+             A 65 65 0 0 0 260 120
+             A 55 55 0 0 0 160 160
+             A 50 50 0 0 0 150 250 Z" 
+          fill="url(#cloudGrad)" />
+    <!-- Secondary foreground cloud fluff -->
+    <ellipse cx="220" cy="210" rx="35" ry="30" fill="#ffffff" opacity="0.25" />
+    <ellipse cx="290" cy="205" rx="45" ry="35" fill="#ffffff" opacity="0.2" />
+  </g>
+
+  <!-- Data/Network Nodes & Arrows -->
+  <g stroke="#ffffff" stroke-width="3" stroke-linecap="round" opacity="0.85">
+    <!-- Server icon inside cloud -->
+    <rect x="230" y="180" width="60" height="14" rx="3" fill="#ffffff" />
+    <circle cx="240" cy="187" r="2" fill="#2563eb" />
+    <circle cx="248" cy="187" r="2" fill="#10b981" />
+
+    <rect x="230" y="202" width="60" height="14" rx="3" fill="#ffffff" />
+    <circle cx="240" cy="209" r="2" fill="#2563eb" />
+    <circle cx="248" cy="209" r="2" fill="#10b981" />
+  </g>
+</svg>
+
